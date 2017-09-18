@@ -1815,6 +1815,13 @@ end
     @deprecate get_creds!(cache::CachedCredentials, credid, default) get!(cache, credid, default)
 end
 
+# PR #23755
+# we need to use depwarn() directly since the function is not exported
+function runtests(args...)
+    depwarn("Base.runtests is deprecated, use Base.test instead.", :runtests)
+    Base.test(args...)
+end
+
 # END 0.7 deprecations
 
 # BEGIN 1.0 deprecations

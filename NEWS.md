@@ -449,6 +449,8 @@ Deprecated or removed
     `prompt_if_incorrect` argument are deprecated. Instead, prompting behavior is controlled using
     the `allow_prompt` keyword in the `LibGit2.CredentialPayload` constructor ([#23690]).
 
+  * `Base.runtests` has been renamed to `Base.test` for consistency with `Pkg.test` ([#23755]).
+
 Command-line option changes
 ---------------------------
 
